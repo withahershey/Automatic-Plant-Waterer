@@ -3,8 +3,7 @@
 //     Possible serial noise or corruption error
 // Load Wi-Fi library
 #include <WiFi.h>
-#define motor1A 13
-#define pumpPin 27
+#define pumpPin 25
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 #define motorEnable 33
@@ -50,7 +49,6 @@ void setup() {
   Serial.println(WiFi.softAPIP());
   server.begin();
   // PUMP THINGS
-  pinMode(motor1A, OUTPUT);
   pinMode(pumpPin, OUTPUT);
   digitalWrite(pumpPin, LOW);
   pinMode(motorEnable, OUTPUT);
